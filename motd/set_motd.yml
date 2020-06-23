@@ -1,6 +1,5 @@
 ---
 - name: Setup MOTD on Linux Host
-  hosts: localhost
   gather_facts: true
   tasks:
     - name: Copy over MOTD file
