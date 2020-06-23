@@ -5,7 +5,7 @@
   tasks:
     - name: Debug vars
       debug:
-        msg: "{{ ansible_facts }}"
+        msg: "{{ hostvars[ansible_facts.fqdn] }}"
     - name: Copy over MOTD file
       template:
         src: motd.j2
