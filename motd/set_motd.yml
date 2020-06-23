@@ -1,0 +1,5 @@
+---
+- name: Setup MOTD on Linux Host
+  tasks:
+    - name: Roll it
+      include_tasks: main.yml
