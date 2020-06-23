@@ -1,5 +1,12 @@
 ---
 - name: Setup MOTD on Linux Host
+  hosts: localhost
+  gather_facts: true
   tasks:
-    - name: Roll it
-      include_tasks: main.yml
+    - name: Copy over MOTD file
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        mode: 0644
+        owner: root
+        group: root
