@@ -3,6 +3,9 @@
   hosts: all
   gather_facts: true
   tasks:
+    - name: Debug vars
+      debug:
+        msg: "{{ hostvars }}"
     - name: Copy over MOTD file
       template:
         src: motd.j2
