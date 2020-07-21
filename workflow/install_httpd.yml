@@ -1,0 +1,9 @@
+---
+- name: Install HTTPd
+  hosts: all
+  
+  tasks:
+  - name: Install apache httpd server
+    yum:
+      name: httpd
+      state: latest
