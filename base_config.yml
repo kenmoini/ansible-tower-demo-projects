@@ -1,0 +1,9 @@
+---
+- name: Set base configuration for global RHEL systems
+  hosts: all
+  
+  tasks:
+  - name: Update system
+    yum:
+      name: '*'
+      state: latest
