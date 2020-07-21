@@ -8,5 +8,5 @@
       firewalld:
         service: http
         permanent: yes
-        enabled: yes
+        state: enabled
         immediate: yes
