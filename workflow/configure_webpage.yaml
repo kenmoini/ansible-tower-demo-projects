@@ -1,0 +1,14 @@
+---
+- name: Deploy site
+  hosts: all
+  
+  tasks:
+  - name: Ensure www directory exists
+    file:
+      path: /var/www/html
+      state: directory
+      
+  - name: Deploy html file for our example site
+    template:
+      src: index.html.j2
+      dest: /var/www/html
