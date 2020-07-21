@@ -1,0 +1,14 @@
+---
+- name: Add Nginx Repo to RHEL7
+  hosts: all
+  tasks:
+  
+  - name: Create repo file
+    blockinfile:
+      path: /etc/yum.repos.d/nginx.repo
+      block: |
+      [nginx]
+      name=nginx repo
+      baseurl=http://nginx.org/packages/mainline/rhel/7/$basearch/
+      gpgcheck=0
+      enabled=1
