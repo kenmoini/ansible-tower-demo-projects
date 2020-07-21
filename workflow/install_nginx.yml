@@ -1,0 +1,9 @@
+---
+- name: Install nginx web server
+  hosts: all
+  
+  tasks:
+  - name: Install nginx http server
+    yum:
+      name: nginx
+      state: latest
