@@ -1,0 +1,12 @@
+---
+- name: Enable the http port on firewalld
+  hosts: all
+  
+  tasks:
+  
+    - name: Enable HTTP
+      firewalld:
+        service: http
+        permanent: yes
+        enabled: yes
+        immediate: yes
