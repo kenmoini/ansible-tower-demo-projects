@@ -6,6 +6,7 @@
   - name: Create repo file
     blockinfile:
       path: /etc/yum.repos.d/nginx.repo
+      create: yes
       block: |
         [nginx]
         name=nginx repo
